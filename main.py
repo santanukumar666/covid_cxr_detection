@@ -56,7 +56,7 @@ def uploaded_chest():
             file.save(os.path.join(
                 app.config['UPLOAD_FOLDER'], 'upload_chest.jpg'))
 
-        xception_chest = load_model('./models/my_model.h5')
+        xception_chest = load_model('./Saved Models/my_model.h5')
 
     img_arr = preprocess_test_img('./assets/images/upload_chest.jpg')
     xception_pred = xception_chest.predict(img_arr)
